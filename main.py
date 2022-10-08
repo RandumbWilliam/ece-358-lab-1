@@ -263,7 +263,7 @@ def question_6():
     simulation_time = 1000  # T Simulation time
     avg_packet_length = 2000  # L Average length of packet in bits
     transmission_rate = 1 * MBPS  # C Transmission rate of the output link in bits/second
-    utilization_queues = [0.5, 0.6, 0.7, 0.8, 0.9, 1, 1.1, 1.2, 1.3, 1.4, 1.5] # ρ Range of utilization of the queue
+    utilization_queues = [0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5] # ρ Range of utilization of the queue
     max_queue_sizes = [10, 25, 50]  # K Range of max queue sizes
 
     # Store array of metrics for graph
@@ -282,7 +282,7 @@ def question_6():
         # Store array of data for each max queue size
         runs_data_k = []
 
-        # Iterate for the range of 0.25 < ρ < 0.95 with step 0.1
+        # Iterate for the range of 0.5 < ρ < 1.5 with step 0.1
         for utilization_queue in utilization_queues:
             # Initialize MM1Simulation
             simulation = MM1KSimulation(simulation_time, utilization_queue, avg_packet_length, transmission_rate, max_queue_size)
